@@ -1,0 +1,8 @@
+<h1>Income</h1>
+<ul>
+{% for income in object_list %}
+    <li>{{ income.name }}</li>
+{% empty %}
+    <li>No Income yet.</li>
+{% endfor %}
+</ul>
