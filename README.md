@@ -1,2 +1,4 @@
 # finsee
-help see your financial bot income and outcome
+help see your financial both income and outcome
+
+project is still in progress nightly
