@@ -1,0 +1,24 @@
+{
+  "name": "finsee-webpack",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "build": "NODE_ENV=${NODE_ENV:-production} webpack --mode=production",
+    "start": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "@riotjs/compiler": "^4.10.1",
+    "@riotjs/webpack-loader": "^4.0.3",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.2.1",
+    "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.10.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "riot": "^4.13.5"
+  }
+}
