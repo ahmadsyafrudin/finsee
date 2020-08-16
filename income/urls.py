@@ -1,10 +1,14 @@
-from django.urls import path
+from django.conf.urls import url
+from django.urls import include
+from rest_framework import routers
 
-from . import views
+from income.views import IncomeViewSet
+
+router = routers.SimpleRouter(trailing_slash=True)
+
+router.register("income", IncomeViewSet)
 
 
 urlpatterns = [
-    path("", views.ListIncome.as_view(), name="income-list"),
-    path("add/", views.CreateIncome.as_view(), name="income-add"),
-    path("update/<int:pk>/", views.UpdateIncome.as_view(), name="income-update")
+    url("", include(router.urls)),
 ]

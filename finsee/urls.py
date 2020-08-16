@@ -17,6 +17,6 @@ Including another URLconf
 from django.urls import path, include
 
 urlpatterns = [
-    path("income/", include("income.urls")),
+    path("", include("income.urls")),
 
 ]

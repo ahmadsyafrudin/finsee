@@ -8,10 +8,7 @@ Install python
 ```
 pip install -r requirements.txt
 ```
-install js 
-```
-yarn install
-```
+
 # running the app
 ```
 honcho start
