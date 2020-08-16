@@ -16,7 +16,10 @@ Including another URLconf
 # from django.contrib import admin
 from django.urls import path, include
 
+from utils.views import api_health
+
 urlpatterns = [
     path("", include("income.urls")),
+    path("", api_health, name='api-health'),
 
 ]

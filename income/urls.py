@@ -1,5 +1,4 @@
-from django.conf.urls import url
-from django.urls import include
+from django.urls import include, path
 from rest_framework import routers
 
 from income.views import IncomeViewSet
@@ -10,5 +9,5 @@ router.register("income", IncomeViewSet)
 
 
 urlpatterns = [
-    url("", include(router.urls)),
+    path("", include(router.urls)),
 ]
