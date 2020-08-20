@@ -22,9 +22,15 @@ class OutcomeCategory(CreatedModified):
         related_name="detail",
         on_delete=models.CASCADE,
     )
+
     class Meta:
         ordering = ['-id']
         db_table = 'outcome_category'
+
+    def __str__(self):
+        if self.parent:
+            return f'{self.parent} > {self.name}'
+        return self.name
 
 
 class Outcome(CreatedModified):
@@ -55,6 +61,9 @@ class Outcome(CreatedModified):
         ordering = ['-id']
         db_table = 'outcome'
 
+    def __str__(self):
+        return self.name
+
 
 class OutcomeTemplate(CreatedModified):
     name = models.CharField(max_length=128)
@@ -63,20 +72,25 @@ class OutcomeTemplate(CreatedModified):
         ordering = ['-id']
         db_table = 'outcome_template'
 
+    def __str__(self):
+        return self.name
+
 
 class OutcomeTemplateDetail(CreatedModified):
     outcome = models.ForeignKey(
         "outcome.Outcome",
         on_delete=models.CASCADE,
-        related_name="outcome_detail",
-
-        null=True)
+        related_name="outcome_detail")
 
     outcome_template = models.ForeignKey(
         "outcome.OutcomeTemplate",
         related_name="outcome_template_detail",
-        on_delete=models.CASCADE, null=True)
+        on_delete=models.CASCADE)
 
     class Meta:
         ordering = ['-id']
         db_table = 'outcome_template_details'
+
+    def __str__(self):
+        return f'{self.outcome.name} - {self.outcome_template.name} '
+

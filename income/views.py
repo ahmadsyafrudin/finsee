@@ -1,5 +1,3 @@
-from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView, UpdateView
 from rest_framework import viewsets
 
 from income.models import Income
