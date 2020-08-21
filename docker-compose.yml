@@ -1,6 +1,7 @@
 version: '3'
 services:
-  web:
+  finsee:
     build: .
+    image: ahmadsyafrudin/finsee:v1
     ports:
       - "8000:8000"
