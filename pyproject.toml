@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "finsee"
-version = "0.2.0"
+version = "0.3.0"
 description = "Financial Notes both income and outcome"
 authors = ["ahmadsyafrudin <sfrmd4@gmail.com>"]
 license = "MIT"
