@@ -4,7 +4,7 @@ help see your financial both income and outcome
 project is still in progress nightly
 
 # Install Requirements
-Install python
+Install requirements
 ```
 pip install -r requirements.txt
 ```
